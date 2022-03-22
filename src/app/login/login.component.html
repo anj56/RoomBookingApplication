@@ -1,0 +1,7 @@
+<h5>Login page</h5>
+<form #userform="ngForm">
+<input #idField="ngModel" type="text" name="id" [(ngModel)]="user.id" placeholder="id" required>
+<span *ngIf="nameField.invalid && nameField.touched">Id is MUST</span>
+<br><br>
+<input #nameField="ngModel" type="text" name="email" [(ngModel)]="user.email" placeholder="email" required>
+<span *ngIf="nameField.invalid && nameField.touched">email is MUST</span>
